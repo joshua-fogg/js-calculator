@@ -1,16 +1,16 @@
 var equation = "";
 
-
 function equationBuilder(number){
 equation += number;
   document.getElementById("screen").innerHTML=equation;
 }
 
 function runEquals(){
-    var equals = '(function equationBuilder() {})'
-    var fct2 =eval (equals)
+    equals = (eval(equation));
+    document.getElementById("screen").innerHTML= equals;
   };
 
 function runClear() {
-  document.container.calculator.screen.innerHTML=" ";
+  equation = 0;
+  document.getElementById("screen").innerHTML=" ";
 }
