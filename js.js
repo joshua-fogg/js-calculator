@@ -1,6 +1,16 @@
-/* button function
-<button onclick="btn 7()">7</button> */
+var equation = "";
 
-("div.button").click(function(){
-  GetContent ("7");
-});
+
+function equationBuilder(number){
+equation += number;
+  document.getElementById("screen").innerHTML=equation;
+}
+
+function runEquals(){
+    var equals = '(function equationBuilder() {})'
+    var fct2 =eval (equals)
+  };
+
+function runClear() {
+  document.container.calculator.screen.innerHTML=" ";
+}
